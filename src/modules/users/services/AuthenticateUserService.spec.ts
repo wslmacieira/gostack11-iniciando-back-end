@@ -9,19 +9,18 @@ let fakeHashProvider: FakeHashProvider;
 let createUser: CreateUserService;
 let authenticateUser: AuthenticateUserService;
 
-describe('CreateUser', () => {
+describe('AuthenticateUser', () => {
   beforeEach(() => {
     fakeUsersRepository = new FakeUsersRepository();
     fakeHashProvider = new FakeHashProvider();
-
-    createUser = new CreateUserService(fakeUsersRepository, fakeHashProvider);
-  });
-  it('should be able to create a new user', async () => {
     authenticateUser = new AuthenticateUserService(
       fakeUsersRepository,
       fakeHashProvider,
     );
+    createUser = new CreateUserService(fakeUsersRepository, fakeHashProvider);
+  });
 
+  it('should be able to authenticate', async () => {
     const user = await createUser.execute({
       name: 'Jhon doe',
       email: 'johndoe@example.com',
