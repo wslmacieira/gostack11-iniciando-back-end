@@ -63,8 +63,8 @@ O envio de e-mails deve acontecer em segundo plano (backgroun job)
 
 **RN**
 
-- Cada agendamento deve durar 1h exatamente;
 - Os agendamentos devem estar disponíveis entre 8h ás 18h (Primeiro ás 8h, último ás 17h);
-- O usuário não pode agendar em um horário já ocupado;
 - O usuário não pode agendar em um horário que já passou;
 - O usuário não pode agendar serviços consigo mesmo;
+- Cada agendamento deve durar 1h exatamente;
+- O usuário não pode agendar em um horário já ocupado;
