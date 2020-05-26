@@ -18,14 +18,14 @@
     }
   },
   {
-    "name":"mongo",
+    "name": "mongo",
     "type": "mongodb",
     "host": "localhost",
     "port": 27017,
     "database": "gobarber",
     "useUnifiedTopology": true,
     "entities": [
-      "./src/modules/**/infra/typeorm/schema/*.ts"
+      "./src/modules/**/infra/typeorm/schemas/*.ts"
     ]
   }
 ]
